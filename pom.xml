@@ -26,7 +26,6 @@
     <module>gosu-process</module>
     <module>gosu-lab</module>
     <module>gosu-doc</module>
-    <module>gosu-maven-compiler</module>
     <module>gosu-parent</module>
     <module>gosu-test</module>
     <module>gosu-test-api</module>

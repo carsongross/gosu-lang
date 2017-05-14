@@ -47,25 +47,15 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>Compile Gosu sources</id>
-            <phase>compile</phase>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <compilerId>gosuc</compilerId>
-            </configuration>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.gosu-lang.gosu</groupId>
-            <artifactId>gosu-maven-compiler</artifactId>
-            <version>${project.version}</version>
-          </dependency>
-        </dependencies>
+        <configuration>
+          <fork>true</fork>
+          <compilerArgs>
+            <arg>-J-Xdebug</arg>
+            <arg>-J-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000</arg>
+            <arg>-J-Dgosu.source.files="/Users/kmoore/dev/gosu-lang/gosu-lang/gosu-core-api/src/main/gosu/gw/util/time/AmPm.gs"</arg>
+          </compilerArgs>
+          <verbose>true</verbose>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
